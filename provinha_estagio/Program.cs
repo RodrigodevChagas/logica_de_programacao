@@ -78,3 +78,34 @@ void calculaAreaPiramide()
 };
 
 //calculaAreaPiramide();
+
+// Variaveis que estarão presentes na lógica matemática
+int fatorial = 0;
+int tamanhoSequencia = 0;
+double dividendo = 100;
+double resultado;
+double somatorio = 0;
+
+//Loop while para que seja encontrado os 15 termos da sequencia.
+while (tamanhoSequencia < 15) {
+    //Verificação para evitar que seja feito divisão por 0.
+    //Lógica da fatoração
+    if (fatorial > 1) {
+        for (int i = fatorial - 1; i > 0; i--)
+        {
+            fatorial *= i;
+        }
+        resultado = dividendo / fatorial;
+    }
+    else { resultado = dividendo; }
+
+    //somando os termos da sequencia númerica
+    somatorio += resultado;
+
+    //incrementos e decrementos
+    dividendo -= 2;
+    fatorial += 1;
+    tamanhoSequencia++;
+}
+//Console.WriteLine($"o somatorio {somatorio}");
+//Console.ReadLine();
