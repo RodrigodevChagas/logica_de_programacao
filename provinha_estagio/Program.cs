@@ -153,6 +153,6 @@ void bubbleSort(int[] vetor) {
     Console.Read();
 }
 //----------Teste para confirmar se está tudo ok--------------
-int[] vetor = { 5, 1, 4, 2, 8 };
+//int[] vetor = { 5, 1, 4, 2, 8 };
 
-bubbleSort(vetor);
+//bubbleSort(vetor);
