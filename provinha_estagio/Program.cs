@@ -46,4 +46,35 @@ void Pesquisar(int[] vet, int n) {
 int[] array = new int[] { 9, 7, 2, 16, 4 };
 
 //Chamando a função.
-Pesquisar(array, 16);
+//Pesquisar(array, 16);
+
+
+// - Altura da pirâmide = recebe pelo teclado;
+// - Lado = 29cm;
+
+// - Altura =  raiz(14.5^2 + Altura da pirâmide^2);
+
+//Area lateral =  4 * 29 * Altura/2
+//Area da base = 29^2 
+
+//Area = Area da Base + Area lateral
+
+//Função não recebe parâmetros no momento de sua chamada.
+void calculaAreaPiramide() 
+{
+    //Estrutura para que seja passado o valor a altura da pirâmide pelo úsuario.
+    Console.Write("Digite a altura da pirâmide: ");
+    double alturaPiramide = Convert.ToDouble(Console.ReadLine());
+    
+    //Lógica matemática do problema.
+    double lado = 6;
+    double areaDaBase = lado * lado;
+    double alturaTriangulo = Math.Sqrt( Math.Pow(lado/2,2) + Math.Pow(alturaPiramide, 2));
+    double areaLateral = 4 * lado * alturaTriangulo / 2;
+    double areaTotal = areaDaBase + areaLateral;
+
+    //Escreve na tela o resultado do cáculo da função com 2 números decimais.
+    Console.WriteLine($"Área total = {areaTotal.ToString("n2")}cm^2.");
+};
+
+//calculaAreaPiramide();
