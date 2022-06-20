@@ -109,3 +109,50 @@ while (tamanhoSequencia < 15) {
 }
 //Console.WriteLine($"o somatorio {somatorio}");
 //Console.ReadLine();
+
+// Método que recebe como parâmetro um vetor de inteiros para ordenar 
+void bubbleSort(int[] vetor) {
+    
+    int temp; //váriavel temporária
+
+    //lógica para o sort em ordem crescente
+    for (int n = 0; n <= vetor.Length - 2; n++)
+    {
+        for (int i = 0; i <= vetor.Length - 2; i++)
+        {
+            if (vetor[i] > vetor[i + 1])
+            {
+                temp = vetor[i + 1];
+                vetor[i + 1] = vetor[i];
+                vetor[i] = temp;
+            }
+        }
+    }
+    Console.Write("Crescente: ");
+    foreach (int n in vetor)
+        Console.Write($"{n} ");
+    
+    //lógica para o sort em ordem decrescente
+    for (int n = 0; n <= vetor.Length - 2; n++)
+    {
+        for (int i = 0; i <= vetor.Length - 2; i++)
+        {
+            if (vetor[i] < vetor[i + 1])
+            {
+                temp = vetor[i + 1];
+                vetor[i + 1] = vetor[i];
+                vetor[i] = temp;
+            }
+        }
+    }
+    Console.WriteLine();
+    Console.Write("Decrescente: ");
+    foreach (int n in vetor)
+        Console.Write($"{n} ");
+
+    Console.Read();
+}
+//----------Teste para confirmar se está tudo ok--------------
+int[] vetor = { 5, 1, 4, 2, 8 };
+
+bubbleSort(vetor);
